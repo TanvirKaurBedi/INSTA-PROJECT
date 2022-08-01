@@ -1,0 +1,1 @@
+{item.postedBy.name}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Macondo&family=Roboto:wght@700&display=swap');
+
+div div .brand-logo-new,
+h2 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 5vw;
+    ;
+}
+
+a {
+    color: black !important;
+}
+
+.nav-wrapper {
+    background-color: aliceblue;
+
+}
+
+.auth-card {
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 100px auto;
+}
+
+.mycard {
+    margin-top: -80px;
+}
+
+.switch {
+    font-size: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.profileImages {
+    width: 30%;
+
+}
+
+.homeCard {
+    max-width: 500px;
+    height: max-content;
+    margin: 26px auto;
+    padding-inline: 10px;
+}
+
+.toCenterCardContent {
+    display: flex;
+    /* justify-content:space-around; */
+    align-items: left;
+    flex-direction: column;
+    border: 2px solid white;
+}
+
+img {
+    max-height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    image-rendering: auto;
+}
+
+.postedByName {
+    font-weight: 400;
+    font-size: 25px;
+
+}
+
+.cursorChange {
+    cursor: pointer;
+}
+
+.follow-btn {
+    width: 200px;
+    height: 28px;
+    padding-inline: 20px;
+    background-color: royalblue;
+  }
