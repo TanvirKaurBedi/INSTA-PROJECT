@@ -20,6 +20,7 @@ const Login = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        debugger;
         console.log(`data=${data}`);
         if (data.error) {
           M.toast({ html: data.error, classes: "#f44336 red" });

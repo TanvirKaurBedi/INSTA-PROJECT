@@ -17,6 +17,7 @@ import Signup from "./components/screens/Signup";
 import Login from "./components/screens/login";
 import CreatePost from "./components/screens/CreatePost";
 import UserProfile from "./components/screens/UserProfile";
+import SubscribedUserPosts from "./components/screens/SubscribedUserPosts";
 
 export const UserContext = createContext();
 
@@ -41,6 +42,7 @@ const Routing = () => {
       <Route exact path="/profile" element={<Profile />}></Route>;
       <Route path="/createpost" element={<CreatePost />}></Route>
       <Route path="/profile/:userid" element={<UserProfile />}></Route>
+      <Route path="/myFollowingsPost"element={<SubscribedUserPosts />}></Route>
     </Routes>
   );
 };

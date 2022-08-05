@@ -124,7 +124,7 @@ const UserProfile = () => {
                   height: "160px",
                   borderRadius: "80px",
                 }}
-                src="https://images.unsplash.com/photo-1655847001912-20a783d10888?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4NXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+                src={user.pic}
               ></img>
             </div>
             <div>

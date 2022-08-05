@@ -133,8 +133,10 @@ const Home = () => {
   };
 
   return (
+
     <div className="home">
-      {data.map((item) => {
+      {data && data.map((item) => {
+
         // debugger;
         // var x = item.likes.includes(user._id);
         return (

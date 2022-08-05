@@ -15,7 +15,7 @@ router.get("/allpost", requireLogin, (req, res) => {
       console.log(err);
     });
 });
-router.get("/getsubscribedpost", requireLogin, (req, res) => {
+router.get("/getsubscribeduserposts", requireLogin, (req, res) => {
   Post.find({ postedBy: { $in: req.user.followings } })
     .populate("postedBy", "_id name")
     .populate("comments.postedBy", "_id name")

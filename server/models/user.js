@@ -6,11 +6,15 @@ const userSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    required: true, 
+    required: true,
   },
   password: {
     type: String,
     required: true,
+  },
+  pic: {
+    type: String,
+    default: "https://res.cloudinary.com/rinu/image/upload/v1659615289/noimage_utdlkc.png"
   },
   followers: [{ type: "ObjectId", ref: "User" }],
   followings: [{ type: "ObjectId", ref: "User" }],

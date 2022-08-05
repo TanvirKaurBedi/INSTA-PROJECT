@@ -6,6 +6,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../keys");
 const requireLogin = require("../middleware/requireLogin");
+const { urlencoded } = require("express");
 
 // router.get("/", (req, res) => {
 //   res.send("hello");
@@ -15,7 +16,7 @@ const requireLogin = require("../middleware/requireLogin");
 // });
 //signup or register
 router.post("/signup", (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, pic } = req.body;
   if (!email || !password || !name) {
     return res.status(422).json({ error: "Please add all the fields" });
   }
@@ -35,6 +36,7 @@ router.post("/signup", (req, res) => {
           email,
           password: hashedpassword,
           name,
+          pic,
         });
         console.log(`user = ${user}`);
 
@@ -72,10 +74,10 @@ router.post("/login", (req, res) => {
         if (doMatch) {
           // res.json({ message: "successfully signed in" });
           const token = jwt.sign({ _id: saveduser._id }, JWT_SECRET);
-          const { _id, name, email, followers, followings } = saveduser;
+          const { _id, name, email, followers, followings, pic } = saveduser;
           res.json({
             token: token,
-            user: { _id, name, email, followers, followings },
+            user: { _id, name, email, followers, followings, pic },
           });
         } else {
           return res.status(422).json({ error: "Invalid Email or Password" });
@@ -83,7 +85,7 @@ router.post("/login", (req, res) => {
       })
 
       .catch((err) => {
-        console.log(err);
+        console.log(err);       
       });
   });
 });
