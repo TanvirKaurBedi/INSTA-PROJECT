@@ -20,7 +20,10 @@ const NavBar = () => {
             <Link to="/createpost">Create Post</Link>
           </li>
           <li>
+
             <Link to="/myFollowingsPost">My Followings Posts</Link>
+
+
           </li>
           <button
             className="btn waves-effect waves-light #e53935 red darken-1 btn-small "

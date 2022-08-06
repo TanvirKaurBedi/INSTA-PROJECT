@@ -42,7 +42,11 @@ const Routing = () => {
       <Route exact path="/profile" element={<Profile />}></Route>;
       <Route path="/createpost" element={<CreatePost />}></Route>
       <Route path="/profile/:userid" element={<UserProfile />}></Route>
-      <Route path="/myFollowingsPost"element={<SubscribedUserPosts />}></Route>
+
+      <Route path="/myFollowingsPost" element={<SubscribedUserPosts />}></Route>
+
+      <Route path="/myfollowingsposts" element={<SubscribedUserPosts />}></Route>
+
     </Routes>
   );
 };

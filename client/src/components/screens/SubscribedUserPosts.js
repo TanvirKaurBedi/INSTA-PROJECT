@@ -2,15 +2,21 @@ import React, { useState, useEffect } from "react";
 import { userDetail } from "../../getUserToken";
 import { Link } from "react-router-dom";
 
-const SubscribedUserPosts= () => {
+
+const SubscribedUserPosts = () => {
+
   const userdetail = userDetail();
   const user = JSON.parse(userdetail);
   console.log(`user5=${user}`);
   const [data, setData] = useState([]);
   const [commentText, setCommentText] = useState("");
 
+
+
+
   useEffect(() => {
-    fetch("/getsubscribeduserposts", {
+    fetch("/getsubscribedpost", {
+
       method: "GET",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
@@ -240,5 +246,7 @@ const SubscribedUserPosts= () => {
     </div>
   );
 };
+
+
 
 export default SubscribedUserPosts;
